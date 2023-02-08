@@ -2,8 +2,8 @@ package main
 
 import (
 	"ch6/geometry"
-	"fmt"
 	_ "ch6/intset"
+	"fmt"
 )
 
 func main() {
@@ -21,7 +21,5 @@ func main() {
 	}
 	fmt.Println(perim.Distance())              // 12, method of geometry.Path
 	fmt.Println(geometry.Path.Distance(perim)) // 12, standalone function
-
-
 
 }

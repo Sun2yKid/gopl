@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"ch2/tempconv"
 	"ch2/popcount"
+	"ch2/tempconv"
 )
 
 func main() {

@@ -6,13 +6,12 @@ import (
 	"math"
 )
 
-type Point struct{X, Y float64}
+type Point struct{ X, Y float64 }
 
 type ColoredPoint struct {
 	Point
 	Color color.RGBA
 }
-
 
 func (p Point) Distance(q Point) float64 {
 	dX := q.X - p.X
@@ -67,5 +66,3 @@ func init() {
 	fmt.Println(*p.Point, *q.Point) // "{2 2} {2 2}"
 	//!-indirect
 }
-
-

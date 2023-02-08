@@ -29,8 +29,8 @@ func fetch(url string, ch chan<- string) {
 		ch <- fmt.Sprint(err) // send to channel ch
 		return
 	}
-	nbytes, err := io.Copy(ioutil.Discard, resp.Body)    //Discard变量类似一个垃圾桶，写一些不要的数据
-	resp.Body.Close() // don't leak resources
+	nbytes, err := io.Copy(ioutil.Discard, resp.Body) //Discard变量类似一个垃圾桶，写一些不要的数据
+	resp.Body.Close()                                 // don't leak resources
 	if err != nil {
 		ch <- fmt.Sprintf("while reading %s: %v", url, err)
 		return
