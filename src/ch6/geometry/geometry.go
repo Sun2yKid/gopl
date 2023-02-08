@@ -2,6 +2,7 @@ package geometry
 
 import "math"
 
+// type Point struct { X, Y float64 ;Distance int}  // field and method with the same name Distance
 type Point struct{ X, Y float64 }
 
 func Distance(p, q Point) float64 {

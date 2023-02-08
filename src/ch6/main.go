@@ -3,6 +3,7 @@ package main
 import (
 	"ch6/geometry"
 	"fmt"
+	_ "ch6/intset"
 )
 
 func main() {
@@ -10,7 +11,7 @@ func main() {
 	q := geometry.Point{4, 6}
 
 	fmt.Println(geometry.Distance(p, q)) // function call
-	fmt.Println(p.Distance(q))           // method call
+	fmt.Println(p.Distance(q))           // method call. expression `p.distance` is called a selector
 
 	perim := geometry.Path{
 		{X: 1, Y: 1},
@@ -18,6 +19,9 @@ func main() {
 		{5, 4},
 		{1, 1},
 	}
-	fmt.Println(perim.Distance())
+	fmt.Println(perim.Distance())              // 12, method of geometry.Path
+	fmt.Println(geometry.Path.Distance(perim)) // 12, standalone function
+
+
 
 }
