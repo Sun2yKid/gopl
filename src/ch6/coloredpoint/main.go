@@ -25,10 +25,10 @@ func (p *Point) ScaleBy(factor float64) {
 }
 
 func main() {
+	fmt.Println("---start main---")
 	var cp ColoredPoint
 	cp.X = 1
 	cp.Point.Y = 2
-	fmt.Println("---start main---")
 	fmt.Println(cp)
 }
 
